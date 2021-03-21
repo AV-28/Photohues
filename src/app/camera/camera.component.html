@@ -1,0 +1,40 @@
+<div style="text-align:center">
+		<webcam [height]="400" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)">
+		</webcam>
+		<br />
+		<button class="actionBtn" (click)="triggerSnapshot();">
+			Click Here and take the Shot</button>
+			<br/>
+		<button class="downloadAllImages" (click)="downloadAllImages();">Download All</button>
+</div>
+
+<div class="clickedimages">
+	<h2>Clicked Images!</h2>
+	
+	<div class="snapshot" *ngIf="webcamImage">
+
+		<div *ngFor="let imageUrl of imageUrls; let i=index" style="height: 200px; width: 200px; display: inline-block;text-align: center;">
+			<br />
+			<!-- <div class="mydates" *ngFor="let myDate of myDates" style="text-align: center; padding: 10px; display: inline-block;">
+				<label style="font-size: 10px;"> {{ myDates[i] | date : 'MMM d, y, h:mm:ss a' }}</label>
+			</div> -->
+			<label style="font-size: 16px;text-align: center;"> {{ myDates[i] | date : 'MMM d, y, h:mm:ss a' }}</label><br/>
+			<div class="ipaddress" style="font-size: 12px;"> <p>Your IP Address : {{ipAddress}}</p> </div>
+
+			<img id="imgUniqe" [src]="imageUrl.imageAsDataUrl" height="150" width="200" style="padding: 15px;" />
+			<app-images [imageUrls]="imageUrl.imageAsDataUrl"></app-images>
+			<button class="download" (click)="downloadImages(imageUrl.imageAsBase64);">Download</button>
+			<button class="delete" (click)="deleteImages(i);">Delete</button>
+		</div>
+		<br/>
+		<h5 style="text-align: center;font-weight: bold;">Location</h5>
+			<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+				<agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"></agm-marker>
+			</agm-map>
+
+			<h5> {{address}}</h5>
+			<div>Latitude: {{latitude}}</div>
+			<div>Longitude: {{longitude}}</div>
+		</div>
+	</div>
+	

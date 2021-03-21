@@ -1,0 +1,73 @@
+.actionBtn {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(245, 211, 18);
+}
+.imageUrl{
+    margin-left:0%;
+    margin-right: 0%;
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.clickedimages{
+    background-color: #e2a11b;
+       box-shadow: rgb(204, 2, 2);
+        max-width: 1800px;
+        max-height: 100%;
+        color: rgb(255, 255, 255);
+        font-style:normal;
+        font-weight: bold;
+        margin-left:0%;
+        margin-right: 0%;
+}
+ul.links{
+    padding-bottom: 20px;
+}
+label{
+    margin-left: 1%;
+}
+.container{
+    color: white;
+}
+agm-map{
+    height:300px;
+}
+.download{
+    background-color: rgb(36, 36, 34);
+    color: white;
+    text-align: center;
+    margin-bottom: 4%;
+    border-color: black;
+}
+.downloadAllImages{
+    background-color:rgb(36, 36, 34) ;
+    color: white;
+    font-size: medium;
+    width:200px;
+    height: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bold;
+    border-color: black;
+}
+h5{
+    font-weight: bold;
+    font-size: 25px;
+}
+.webcam{
+    border:black;
+}
+
+.mydates{
+    margin-left: 0%;
+}
+.delete{
+    margin-left: 6%;
+    background-color: red;
+    color: white;
+    border-color: black;
+}
